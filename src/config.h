@@ -67,6 +67,7 @@
 #ifdef NODEMCU
 #define IMDIR "/im/"
 #define BOOTIMAGE "PLATO13.ATR"
+#define RRATE 2400
 #endif
 
 /*

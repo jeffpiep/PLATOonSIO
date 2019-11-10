@@ -1,4 +1,5 @@
 #include "modem.h"
+#include "config.h"
 
 #undef DEBUG
 
@@ -1656,7 +1657,7 @@ void modemSetup()
 void modemStart()
 {
     Serial.end();
-    Serial.begin(2400);
+    Serial.begin(RRATE);
     if (neverStarted)
     {
         neverStarted = false;
