@@ -66,7 +66,7 @@
 // where are images on SPIFFS?
 #ifdef NODEMCU
 #define IMDIR "/im/"
-#define BOOTIMAGE "PLATO13.ATR"
+#define BOOTIMAGE "SDRIVE.ATR"
 #define RRATE 2400
 #endif
 
