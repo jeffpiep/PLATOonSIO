@@ -1658,6 +1658,7 @@ void modemStart()
 {
     Serial.end();
     Serial.begin(RRATE);
+    Serial.swap();
     if (neverStarted)
     {
         neverStarted = false;

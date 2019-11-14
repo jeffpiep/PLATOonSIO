@@ -12,8 +12,8 @@ Modifed version of SIO2Arduino
 #include "drive_stuff.h"
 #include "modem.h"
 
-//#include "ota.h"
-//#include <Esp.h>
+#include "ota.h"
+#include <Esp.h>
 
 // #ifdef LCD_DISPLAY
 // #include <LiquidCrystal.h>
