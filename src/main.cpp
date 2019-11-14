@@ -11,8 +11,9 @@ Modifed version of SIO2Arduino
 #include "FS.h"
 #include "drive_stuff.h"
 #include "modem.h"
-#include "ota.h"
-#include <Esp.h>
+
+//#include "ota.h"
+//#include <Esp.h>
 
 // #ifdef LCD_DISPLAY
 // #include <LiquidCrystal.h>
@@ -41,9 +42,9 @@ void setup()
   pinMode(MTR_PIN, INPUT_PULLDOWN_16); // motor control pin turns on when R: driver starts. driver is PNP open collector output.
 
   SPIFFS.begin();
-
   // initialize serial port to Atari
   SIO_UART.begin(19200); //Serial uses UART0, which is mapped to pins GPIO1 (TX) and GPIO3 (RX).
+  Serial.swap(); //Serial may be remapped to GPIO15 (TX) and GPIO13 (RX) by calling Serial.swap() after Serial.begin.
 
 #ifdef DEBUG
   // Serial.swap(); //Serial may be remapped to GPIO15 (TX) and GPIO13 (RX) by calling Serial.swap() after Serial.begin.
@@ -116,7 +117,7 @@ void setup()
 
   modemSetup();
 
-  OTAsetup();
+//  OTAsetup();
 }
 
 void loop()
@@ -179,7 +180,7 @@ void loop()
       modemCycle();
     }
   }
-  ArduinoOTA.handle();
+//  ArduinoOTA.handle();
 
 
 
