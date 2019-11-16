@@ -40,7 +40,7 @@
 #define BUSY_MSG_LEN 80
 #define LAST_ADDRESS 780
 
-#define SWITCH_PIN 0 // GPIO0 (programmind mode pin)
+#define SWITCH_PIN 12 // GPIO0 (programmind mode pin)
 #define LED_PIN 5    // Status LED
 #define DCD_PIN 5    // DCD Carrier Status
 // #define RTS_PIN 13   // RTS Request to Send, connect to host's CTS pin

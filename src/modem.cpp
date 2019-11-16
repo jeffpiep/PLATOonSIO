@@ -1605,8 +1605,8 @@ void modemSetup()
 {
     EEPROM.begin(LAST_ADDRESS + 1);
 
-    pinMode(SWITCH_PIN, INPUT);
-    digitalWrite(SWITCH_PIN, HIGH);
+    pinMode(SWITCH_PIN, INPUT_PULLUP);
+    //digitalWrite(SWITCH_PIN, HIGH);
   
     pinMode(DCD_PIN, OUTPUT);
     // no hardware handshaking with Atario SIO
